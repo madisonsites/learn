@@ -1,28 +1,6 @@
-== README
+== Rangin' with Angular (Angular meets Rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sandbox project that is a simple to-do list. It is integrated into Rails to support database functionality in the future as well as allowing me to explore Rails a bit more. 
 
-Things you may want to cover:
+Contributions are definitely welcome, especially any neat Angular tricks you find would integrate well. Because it is within Rails, use ‘rails s’ on the command line to start up your server and navigate to port 3000 in your browser. You’ll find the Angular Javascript file in the public folder (allows more flexibility than a full integration) as well as the HTML it renders awesomeness on. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
