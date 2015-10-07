@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Madi-dos</title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body ng-app="toDoz" ng-controller="MainCtrl">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="page-header">
+        <h1>Madi-doz</h1>
+      </div>
+        <form ng-submit="addTask()" style="margin-top:30px;">
+          <h3>Add a new task</h3>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="task"ng-model="title"></input>
+          </div>
+          <div class="form-group">
+          <input type="text" class="form-control" placeholder="any link references?" ng-model="link"></input>
+          </div>
+          <button type="submit" class="btn btn-primary">New tuh duh</button>
+        </form>
+        <div ng-repeat="task in tasks | orderBy: '-complete'">
+          <span style="font-size:20px; margin-left:10px;">
+            <a ng-show="task.link" href="{{task.link}}">
+              {{task.task}}
+            </a>
+            <span ng-hide="task.link">
+              {{task.task}}
+            </span>
+          </span>
+          <span ng-click="checkOff(task)">
+            <span ng-show="task.complete" class="glyphicon glyphicon-check"></span>
+            <span ng-show="!task.complete" class="glyphicon glyphicon-unchecked"></span>
+          </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
